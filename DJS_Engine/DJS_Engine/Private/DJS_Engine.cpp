@@ -16,7 +16,10 @@ void DJS_ENGINE::Init()
 		return;
 	}
 
+	inputManager.Init(windowManager.GetWindow());
+
 	engineContext.windowManager = &windowManager;
+	engineContext.inputManager = &inputManager;
 }
 
 void DJS_ENGINE::Run()
@@ -24,9 +27,12 @@ void DJS_ENGINE::Run()
 	while (shouldRun && !glfwWindowShouldClose(windowManager.GetWindow()))
 	{
 		windowManager.PollEvents();
-
+		inputManager.Update();
 		windowManager.ClearBackground();
 		
+		if (engineContext.inputManager->IsMousePressed(MOUSE_BUTTON_LEFT))
+			shouldRun = false;
+
 		windowManager.SwapBuffers();
 	}
 }
