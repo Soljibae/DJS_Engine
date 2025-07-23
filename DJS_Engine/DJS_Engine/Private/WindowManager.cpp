@@ -76,6 +76,19 @@ void WindowManager::SetWindowTitle(std::string title)
 	glfwSetWindowTitle(window, this->title.c_str());
 }
 
+void WindowManager::SetCursorHidden(bool enableCursorHidden)
+{
+	if (enableCursorHidden)
+	{
+		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+
+	}
+	else
+	{
+		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+	}
+}
+
 void WindowManager::ClearBackground()
 {
 	glClear(GL_COLOR_BUFFER_BIT);

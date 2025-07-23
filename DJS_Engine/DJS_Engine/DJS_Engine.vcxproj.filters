@@ -24,12 +24,18 @@
     <ClInclude Include="public\WindowManager.h">
       <Filter>Public</Filter>
     </ClInclude>
+    <ClInclude Include="Public\InputManager.h">
+      <Filter>Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\DJS_Engine.cpp">
       <Filter>Private</Filter>
     </ClCompile>
     <ClCompile Include="private\WindowManager.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\InputManager.cpp">
       <Filter>Private</Filter>
     </ClCompile>
   </ItemGroup>
