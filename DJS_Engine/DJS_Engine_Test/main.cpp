@@ -1,31 +1,14 @@
-#include <GLFW/glfw3.h>
+#include "Engine.h"
 
 int main()
 {
-    // GLFW 초기화
-    if (!glfwInit())
-    {
-        return -1;
-    }
+    DJS_ENGINE::GetInstance().Init();
 
-    // 윈도우 생성
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Blank Project Test", NULL, NULL);
-    if (!window)
-    {
-        glfwTerminate();
-        return -1;
-    }
+    //DJS_ENGINE::GetInstance().GetEngineContext().windowManager->SetWindowTitle("New title");
 
-    glfwMakeContextCurrent(window);
+    DJS_ENGINE::GetInstance().Run();
 
-    // 메인 루프
-    while (!glfwWindowShouldClose(window))
-    {
-        glClear(GL_COLOR_BUFFER_BIT);
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-    }
+    DJS_ENGINE::GetInstance().Exit();
 
-    glfwTerminate();
     return 0;
 }

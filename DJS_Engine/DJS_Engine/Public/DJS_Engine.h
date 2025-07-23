@@ -1,6 +1,10 @@
 #pragma once
 #include "WindowManager.h"
 
+struct EngineContext {
+	WindowManager* windowManager = nullptr;
+};
+
 class DJS_ENGINE {
 private:
 	DJS_ENGINE(){}
@@ -9,9 +13,10 @@ private:
 
 	bool shouldRun = true;
 
+	EngineContext engineContext;
 	WindowManager windowManager;
 public:
-	static DJS_ENGINE& GetIncetance()
+	static DJS_ENGINE& GetInstance()
 	{
 		static DJS_ENGINE instance;
 		return instance;
@@ -21,6 +26,8 @@ public:
 	DJS_ENGINE& operator=(const DJS_ENGINE&) = delete;
 	DJS_ENGINE(DJS_ENGINE&&) = delete;
 	DJS_ENGINE& operator=(DJS_ENGINE&&) = delete;
+
+	EngineContext& GetEngineContext();
 
 	void Init();
 	void Run();
