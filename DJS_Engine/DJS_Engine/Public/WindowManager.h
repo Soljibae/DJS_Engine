@@ -3,9 +3,11 @@
 
 struct GLFWwindow;
 struct GLFWmonitor;
+class DJS_ENGINE;
 
 class WindowManager
 {
+	friend DJS_ENGINE;
 private:
 	std::string title = "DJS Engine";
 	float windowWidth = 1600.0;
@@ -18,9 +20,6 @@ private:
 	bool isFullscreen = false;
 	bool isCursurHidden = false;
 
-	void ChangeWindowSize();
-
-public:
 	bool Init();
 	void Exit();
 
@@ -28,6 +27,9 @@ public:
 	void PollEvents();
 	void ClearBackground();
 
+	void ChangeWindowSize();
+
+public:
 	void SetWindowSize(float width, float height);
 	void SetWindowFullScreen(bool enableFullscreen);
 	void SetWindowTitle(std::string title);

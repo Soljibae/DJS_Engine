@@ -2,9 +2,11 @@
 #include <vector>
 
 struct GLFWwindow;
+class DJS_ENGINE;
 enum class KeyState { NONE, PRESSED, DOWN, RELEASED };
 
 class InputManager {
+    friend DJS_ENGINE;
 private:
 	GLFWwindow* window = nullptr;
 
@@ -16,10 +18,10 @@ private:
 
 	float mouseX = 0.f;
 	float mouseY = 0.f;
-public:
-	void Init(GLFWwindow* window);
-	void Update();
 
+    void Init(GLFWwindow* window);
+    void Update();
+public:
 	bool IsKeyPressed(int key) const;
 	bool IsKeyReleased(int key) const;
 	bool IsKeyDown(int key) const;

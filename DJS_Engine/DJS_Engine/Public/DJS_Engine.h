@@ -1,10 +1,12 @@
 #pragma once
 #include "WindowManager.h"
 #include "InputManager.h"
+#include "StateManager.h"
 
 struct EngineContext {
 	WindowManager* windowManager = nullptr;
 	InputManager* inputManager = nullptr;
+	StateManager* stateManager = nullptr;
 };
 
 class DJS_ENGINE {
@@ -18,6 +20,7 @@ private:
 	EngineContext engineContext;
 	WindowManager windowManager;
 	InputManager inputManager;
+	StateManager stateManager;
 public:
 	static DJS_ENGINE& GetInstance()
 	{

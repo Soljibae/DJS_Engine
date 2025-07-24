@@ -27,6 +27,18 @@
     <ClInclude Include="Public\InputManager.h">
       <Filter>Public</Filter>
     </ClInclude>
+    <ClInclude Include="Public\GameState.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\GameObject.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\ObjectManager.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\StateManager.h">
+      <Filter>Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\DJS_Engine.cpp">
@@ -36,6 +48,12 @@
       <Filter>Private</Filter>
     </ClCompile>
     <ClCompile Include="Private\InputManager.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\ObjectManager.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\StateManager.cpp">
       <Filter>Private</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,6 +20,7 @@ void DJS_ENGINE::Init()
 
 	engineContext.windowManager = &windowManager;
 	engineContext.inputManager = &inputManager;
+	engineContext.stateManager = &stateManager;
 }
 
 void DJS_ENGINE::Run()
@@ -30,8 +31,7 @@ void DJS_ENGINE::Run()
 		inputManager.Update();
 		windowManager.ClearBackground();
 		
-		if (engineContext.inputManager->IsMousePressed(MOUSE_BUTTON_LEFT))
-			shouldRun = false;
+		
 
 		windowManager.SwapBuffers();
 	}

@@ -1,4 +1,5 @@
 #include "InputManager.h"
+#include "DJS_ENGINE.h"
 #include  "GLFW/glfw3.h"
 
 void InputManager::Init(GLFWwindow* window)

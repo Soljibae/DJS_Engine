@@ -21,12 +21,18 @@
   <ItemGroup>
     <ClInclude Include="public\DJS_Engine.h" />
     <ClInclude Include="public\Engine.h" />
+    <ClInclude Include="Public\GameObject.h" />
+    <ClInclude Include="Public\GameState.h" />
     <ClInclude Include="Public\InputManager.h" />
+    <ClInclude Include="Public\ObjectManager.h" />
+    <ClInclude Include="Public\StateManager.h" />
     <ClInclude Include="public\WindowManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\DJS_Engine.cpp" />
     <ClCompile Include="Private\InputManager.cpp" />
+    <ClCompile Include="Private\ObjectManager.cpp" />
+    <ClCompile Include="Private\StateManager.cpp" />
     <ClCompile Include="private\WindowManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
