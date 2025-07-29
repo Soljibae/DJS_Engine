@@ -2,6 +2,13 @@
 #include  "GLFW/glfw3.h"
 #include <iostream>
 
+void DJS_ENGINE::SetEngineContext()
+{
+	engineContext.windowManager = &windowManager;
+	engineContext.inputManager = &inputManager;
+	engineContext.stateManager = &stateManager;
+}
+
 void DJS_ENGINE::Init()
 {
 	if (!glfwInit())
@@ -18,9 +25,7 @@ void DJS_ENGINE::Init()
 
 	inputManager.Init(windowManager.GetWindow());
 
-	engineContext.windowManager = &windowManager;
-	engineContext.inputManager = &inputManager;
-	engineContext.stateManager = &stateManager;
+	SetEngineContext();
 }
 
 void DJS_ENGINE::Run()
@@ -30,7 +35,7 @@ void DJS_ENGINE::Run()
 		windowManager.PollEvents();
 		inputManager.Update();
 		windowManager.ClearBackground();
-		
+		//stateManager.Update();
 		
 
 		windowManager.SwapBuffers();

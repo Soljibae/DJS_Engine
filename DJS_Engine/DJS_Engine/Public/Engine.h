@@ -6,3 +6,4 @@
 #include "GameState.h"
 #include "GameObject.h"
 #include "StateManager.h"
+#include "TextureManager.h"

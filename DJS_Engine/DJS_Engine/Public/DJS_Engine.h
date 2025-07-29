@@ -17,6 +17,8 @@ private:
 
 	bool shouldRun = true;
 
+	void SetEngineContext();
+
 	EngineContext engineContext;
 	WindowManager windowManager;
 	InputManager inputManager;

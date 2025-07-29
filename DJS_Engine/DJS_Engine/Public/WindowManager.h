@@ -33,7 +33,7 @@ public:
 	void SetWindowSize(float width, float height);
 	void SetWindowFullScreen(bool enableFullscreen);
 	void SetWindowTitle(std::string title);
-	void SetWindowIcon();
+	void SetWindowIcon(std::string path);
 	void SetCursorHidden(bool enableCursorHidden);
 	float GetWindowWidth() const;
 	float GetWindowHeight() const;

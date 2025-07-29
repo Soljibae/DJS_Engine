@@ -26,6 +26,7 @@
     <ClInclude Include="Public\InputManager.h" />
     <ClInclude Include="Public\ObjectManager.h" />
     <ClInclude Include="Public\StateManager.h" />
+    <ClInclude Include="Public\TextureManager.h" />
     <ClInclude Include="public\WindowManager.h" />
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +34,7 @@
     <ClCompile Include="Private\InputManager.cpp" />
     <ClCompile Include="Private\ObjectManager.cpp" />
     <ClCompile Include="Private\StateManager.cpp" />
+    <ClCompile Include="Private\TextureManager.cpp" />
     <ClCompile Include="private\WindowManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -94,6 +96,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Public;$(ProjectDir)Private;$(ProjectDir)Thirdparty</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -109,6 +112,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Public;$(ProjectDir)Private;$(ProjectDir)Thirdparty</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,6 +128,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Public;$(ProjectDir)Private;$(ProjectDir)Thirdparty</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,6 +144,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Public;$(ProjectDir)Private;$(ProjectDir)Thirdparty</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

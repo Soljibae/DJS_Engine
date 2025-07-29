@@ -1,3 +1,5 @@
+#define STB_IMAGE_IMPLEMENTATION
+#include "STBImage/stb_image.h"
 #include "WindowManager.h"
 #include "DJS_ENGINE.h"
 #include  "GLFW/glfw3.h"
@@ -5,6 +7,9 @@
 
 bool WindowManager::Init()
 {
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
 	window = glfwCreateWindow(static_cast<int>(windowWidth), static_cast<int>(windowHeight), title.c_str(), NULL, NULL);
@@ -95,9 +100,19 @@ void WindowManager::ClearBackground()
 	glClear(GL_COLOR_BUFFER_BIT);
 }
 
-void WindowManager::SetWindowIcon()
+void WindowManager::SetWindowIcon(std::string path)
 {
-	//to do: need stb_image
+	GLFWimage images[1];
+	int width, height, channels;
+	unsigned char* pixels = stbi_load(path.c_str(), &width, &height, &channels, 4);
+
+	images[0].width = width;
+	images[0].height = height;
+	images[0].pixels = pixels;
+
+	glfwSetWindowIcon(window, 1, images);
+
+	stbi_image_free(pixels);
 }
 
 float WindowManager::GetWindowWidth() const

@@ -39,6 +39,9 @@
     <ClInclude Include="Public\StateManager.h">
       <Filter>Public</Filter>
     </ClInclude>
+    <ClInclude Include="Public\TextureManager.h">
+      <Filter>Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\DJS_Engine.cpp">
@@ -54,6 +57,9 @@
       <Filter>Private</Filter>
     </ClCompile>
     <ClCompile Include="Private\StateManager.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\TextureManager.cpp">
       <Filter>Private</Filter>
     </ClCompile>
   </ItemGroup>
