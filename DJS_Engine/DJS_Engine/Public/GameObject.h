@@ -2,9 +2,8 @@
 
 class GameObject {
 private:
-	virtual ~GameObject() = default;
-
 public:
+	virtual ~GameObject() = default;
 	virtual void Init() {}
 	virtual void LateInit() {}
 	virtual void Update() {}

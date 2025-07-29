@@ -36,5 +36,5 @@ void ObjectManager::ExitAll()
 
 void ObjectManager::AddObjectToList(std::unique_ptr<GameObject> object)
 {
-	objects.push_back(object);
+	objects.push_back(std::move(object));
 }

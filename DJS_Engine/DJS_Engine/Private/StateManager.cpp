@@ -1,6 +1,5 @@
 #include "StateManager.h"
 #include "DJS_ENGINE.h"
-#include "GameState.h"
 
 void StateManager::Update()
 {

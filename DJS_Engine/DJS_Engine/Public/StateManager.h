@@ -1,8 +1,8 @@
 #pragma once
 #include <memory>
+#include "GameState.h"
 
 class DJS_ENGINE;
-class GameState;
 
 class StateManager {
 	friend DJS_ENGINE;
