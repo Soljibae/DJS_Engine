@@ -7,3 +7,5 @@
 #include "GameObject.h"
 #include "StateManager.h"
 #include "TextureManager.h"
+#include "RenderManager.h"
+#include "Shader.h"

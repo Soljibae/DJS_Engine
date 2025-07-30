@@ -2,11 +2,13 @@
 #include "WindowManager.h"
 #include "InputManager.h"
 #include "StateManager.h"
+#include "RenderManager.h"
 
 struct EngineContext {
 	WindowManager* windowManager = nullptr;
 	InputManager* inputManager = nullptr;
 	StateManager* stateManager = nullptr;
+	RenderManager* renderManager = nullptr;
 };
 
 class DJS_ENGINE {
@@ -23,6 +25,7 @@ private:
 	WindowManager windowManager;
 	InputManager inputManager;
 	StateManager stateManager;
+	RenderManager renderManager;
 public:
 	static DJS_ENGINE& GetInstance()
 	{

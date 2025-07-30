@@ -25,6 +25,8 @@
     <ClInclude Include="Public\GameState.h" />
     <ClInclude Include="Public\InputManager.h" />
     <ClInclude Include="Public\ObjectManager.h" />
+    <ClInclude Include="Public\RenderManager.h" />
+    <ClInclude Include="Public\Shader.h" />
     <ClInclude Include="Public\StateManager.h" />
     <ClInclude Include="Public\TextureManager.h" />
     <ClInclude Include="public\WindowManager.h" />
@@ -33,6 +35,8 @@
     <ClCompile Include="private\DJS_Engine.cpp" />
     <ClCompile Include="Private\InputManager.cpp" />
     <ClCompile Include="Private\ObjectManager.cpp" />
+    <ClCompile Include="Private\RenderManager.cpp" />
+    <ClCompile Include="Private\Shader.cpp" />
     <ClCompile Include="Private\StateManager.cpp" />
     <ClCompile Include="Private\TextureManager.cpp" />
     <ClCompile Include="private\WindowManager.cpp" />

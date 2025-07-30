@@ -150,6 +150,8 @@ void WindowManager::ChangeWindowSize()
 	if (isFullscreen)
 	{
 		glfwSetWindowMonitor(window, monitor, 0, 0, static_cast<int>(screenWidth), static_cast<int>(screenHeight), screenRefreshRate);
+
+		DJS_ENGINE::GetInstance().GetEngineContext().renderManager->OnWindowResize(static_cast<int>(screenWidth), static_cast<int>(screenHeight));
 	}
 	else
 	{
@@ -157,5 +159,7 @@ void WindowManager::ChangeWindowSize()
 		int yPos = static_cast<int>((screenHeight - windowHeight) / 2.f);
 
 		glfwSetWindowMonitor(window, monitor, xPos, yPos, static_cast<int>(windowWidth), static_cast<int>(windowHeight), 0);
+
+		DJS_ENGINE::GetInstance().GetEngineContext().renderManager->OnWindowResize(static_cast<int>(windowWidth), static_cast<int>(windowHeight));
 	}
 }

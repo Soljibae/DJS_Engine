@@ -1,3 +1,5 @@
+#define GLAD_GL_IMPLEMENTATION
+#include "GLAD/gl.h"
 #include "DJS_Engine.h"
 #include  "GLFW/glfw3.h"
 #include <iostream>
@@ -7,6 +9,7 @@ void DJS_ENGINE::SetEngineContext()
 	engineContext.windowManager = &windowManager;
 	engineContext.inputManager = &inputManager;
 	engineContext.stateManager = &stateManager;
+	engineContext.renderManager = &renderManager;
 }
 
 void DJS_ENGINE::Init()
