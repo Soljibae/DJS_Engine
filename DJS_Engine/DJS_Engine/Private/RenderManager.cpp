@@ -7,8 +7,8 @@
 
 void RenderManager::Init()
 {
-	float screenWidth = DJS_ENGINE::GetInstance().GetEngineContext().windowManager->GetScreenWidth();
-	float screenHeight = DJS_ENGINE::GetInstance().GetEngineContext().windowManager->GetScreenHeight();
+	float screenWidth = DJS_ENGINE::GetInstance().GetEngineContext().windowManager->GetWindowWidth();
+	float screenHeight = DJS_ENGINE::GetInstance().GetEngineContext().windowManager->GetWindowHeight();
 
 	int iScreenWidth = static_cast<int>(screenWidth);
 	int iScreenHeight = static_cast<int>(screenHeight);

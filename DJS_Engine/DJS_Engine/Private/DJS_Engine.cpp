@@ -20,15 +20,22 @@ void DJS_ENGINE::Init()
 		return;
 	}
 
+	SetEngineContext();
+
 	if(!windowManager.Init())
 	{
 		std::cerr << "Failed to Initialize window manager" << std::endl;
 		return;
 	}
 
-	inputManager.Init(windowManager.GetWindow());
+	if (!gladLoadGL(glfwGetProcAddress)) // gladLoadGL 함수 호출
+	{
+		std::cerr << "Failed to initialize GLAD" << std::endl;
+		return; // GLAD 초기화 실패 시 프로그램 종료
+	}
 
-	SetEngineContext();
+	inputManager.Init(windowManager.GetWindow());
+	renderManager.Init();
 }
 
 void DJS_ENGINE::Run()
@@ -38,8 +45,8 @@ void DJS_ENGINE::Run()
 		windowManager.PollEvents();
 		inputManager.Update();
 		windowManager.ClearBackground();
-		//stateManager.Update();
-		
+		stateManager.Update();
+		stateManager.Draw();
 
 		windowManager.SwapBuffers();
 	}

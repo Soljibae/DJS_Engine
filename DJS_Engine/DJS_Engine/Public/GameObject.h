@@ -8,5 +8,6 @@ public:
 	virtual void LateInit() {}
 	virtual void Update() {}
 	virtual void LateUpdate() {}
+	virtual void Draw() {}
 	virtual	void Exit() {}
 };
