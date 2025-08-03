@@ -13,6 +13,13 @@ void RenderManager::Init()
 	int iScreenWidth = static_cast<int>(screenWidth);
 	int iScreenHeight = static_cast<int>(screenHeight);
 
+	this->windowWidth = iScreenWidth;
+	this->windowHeight = iScreenHeight;
+	this->screenWidth = static_cast<int>(DJS_ENGINE::GetInstance().GetEngineContext().windowManager->GetScreenWidth());
+	this->screenHeight = static_cast<int>(DJS_ENGINE::GetInstance().GetEngineContext().windowManager->GetScreenHeight());
+	//this->zoom = 1.f;
+	this->isFullScreen = DJS_ENGINE::GetInstance().GetEngineContext().windowManager->GetIsFullscreen();
+	
 	glViewport(0, 0, iScreenWidth, iScreenHeight);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -85,6 +92,37 @@ void RenderManager::Init()
 	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)0);
 
 	glBindVertexArray(0);
+}
+
+void RenderManager::Update(int width, int height, float zoom, bool isFullScreen)
+{
+	if (this->windowWidth != width || this->windowHeight != height || this->zoom != zoom || this->isFullScreen != isFullScreen)
+	{
+		this->windowWidth = width;
+		this->windowHeight = height;
+		this->zoom = zoom;
+		this->isFullScreen = isFullScreen;
+
+		float targetWidth;
+		float targetHeight;
+
+		if (this->isFullScreen)
+		{
+			targetWidth = static_cast<float>(this->screenWidth);
+			targetHeight = static_cast<float>(this->screenHeight);
+		}
+		else
+		{
+			targetWidth = static_cast<float>(this->windowWidth);
+			targetHeight = static_cast<float>(this->windowHeight);
+		}
+		glViewport(0, 0, static_cast<int>(targetWidth), static_cast<int>(targetHeight));
+
+		shader.Use();
+		glm::mat4 projection = glm::ortho(-targetWidth / 2.f, targetHeight / 2.f, -targetWidth / 2.f, targetHeight / 2.f, -1.0f, 1.0f); //to do zoom
+
+		shader.SetMat4("projection", glm::value_ptr(projection));
+	}
 }
 
 void RenderManager::Draw(const std::string& textureName,

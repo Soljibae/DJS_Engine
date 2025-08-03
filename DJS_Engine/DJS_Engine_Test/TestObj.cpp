@@ -2,7 +2,6 @@
 
 void TestObj::Init()
 {
-	DJS_ENGINE::GetInstance().GetEngineContext().renderManager->textureManager.LoadTexture("test", "Assets/test.png");
 }
 
 void TestObj::Draw()

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Public\CameraManager.h" />
     <ClInclude Include="public\DJS_Engine.h" />
     <ClInclude Include="public\Engine.h" />
     <ClInclude Include="Public\GameObject.h" />
@@ -32,6 +33,7 @@
     <ClInclude Include="public\WindowManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Private\CameraManager.cpp" />
     <ClCompile Include="private\DJS_Engine.cpp" />
     <ClCompile Include="Private\InputManager.cpp" />
     <ClCompile Include="Private\ObjectManager.cpp" />

@@ -48,6 +48,9 @@
     <ClInclude Include="Public\Shader.h">
       <Filter>Public</Filter>
     </ClInclude>
+    <ClInclude Include="Public\CameraManager.h">
+      <Filter>Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\DJS_Engine.cpp">
@@ -72,6 +75,9 @@
       <Filter>Private</Filter>
     </ClCompile>
     <ClCompile Include="Private\Shader.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\CameraManager.cpp">
       <Filter>Private</Filter>
     </ClCompile>
   </ItemGroup>
