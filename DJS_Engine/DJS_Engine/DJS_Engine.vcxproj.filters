@@ -51,6 +51,9 @@
     <ClInclude Include="Public\CameraManager.h">
       <Filter>Public</Filter>
     </ClInclude>
+    <ClInclude Include="Public\Math.h">
+      <Filter>Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\DJS_Engine.cpp">
@@ -78,6 +81,9 @@
       <Filter>Private</Filter>
     </ClCompile>
     <ClCompile Include="Private\CameraManager.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Math.cpp">
       <Filter>Private</Filter>
     </ClCompile>
   </ItemGroup>
