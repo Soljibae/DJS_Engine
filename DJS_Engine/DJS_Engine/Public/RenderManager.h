@@ -1,5 +1,6 @@
 #pragma once
 #include "TextureManager.h"
+#include "CameraManager.h"
 #include "Shader.h"
 #include "GameObject.h"
 #include <vector>
@@ -18,7 +19,7 @@ private:
 	unsigned int vbo = 0;
 	unsigned int ebo = 0;
 
-	//float* CreateProjection();
+	void UpdateViewportAndProjection();
 
 	std::vector<GameObject*> renderQue;
 
@@ -30,6 +31,7 @@ private:
 	bool isFullScreen;
 public:
 	TextureManager textureManager;
+	CameraManager cameraManager;
 	void Draw(const std::string& textureName,
 		float x, float y, float width, float height,
 		float uvX = 0.f, float uvY = 0.f, float uvWidth = 1.f, float uvHeight = 1.f);

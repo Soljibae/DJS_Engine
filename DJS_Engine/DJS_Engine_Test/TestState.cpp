@@ -7,7 +7,12 @@ void TestState::Init()
 	Obj.Init();
 }
 
+void TestState::Update()
+{
+	DJS_ENGINE::GetInstance().GetEngineContext().renderManager->cameraManager.SetCameraPosition(200.f, 200.f);
+}
+
 void TestState::Draw()
 {
 	Obj.Draw();
-}
+} 

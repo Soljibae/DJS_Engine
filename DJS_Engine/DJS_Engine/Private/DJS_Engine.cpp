@@ -46,7 +46,7 @@ void DJS_ENGINE::Run()
 		inputManager.Update();
 		windowManager.ClearBackground();
 		stateManager.Update();
-		//renderManager.Update(); to do
+		renderManager.Update(windowManager.GetWindowWidth(), windowManager.GetWindowHeight(), renderManager.cameraManager.GetCameraZoom(), windowManager.GetIsFullscreen());
 		stateManager.Draw();
 
 		windowManager.SwapBuffers();
