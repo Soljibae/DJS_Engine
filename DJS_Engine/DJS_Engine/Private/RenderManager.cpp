@@ -110,7 +110,12 @@ void RenderManager::Draw(const std::string& textureName,
 
 	model = glm::scale(model, glm::vec3(width, height, 1.0f));
 	
-	shader.SetMat4("view", glm::value_ptr(glm::translate(glm::mat4(1.0f), glm::vec3(-cameraManager.GetCameraPositionX(), -cameraManager.GetCameraPositionY(), 0.0f))));
+	glm::mat4 view = glm::mat4(1.0f);
+
+	if (cameraManager.GetCameraOn())
+		view = glm::translate(view, glm::vec3(-cameraManager.GetCameraPositionX(), -cameraManager.GetCameraPositionY(), 0.0f));
+
+	shader.SetMat4("view", glm::value_ptr(view));
 
 	shader.SetMat4("model", glm::value_ptr(model));
 
