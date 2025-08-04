@@ -46,6 +46,7 @@ void DJS_ENGINE::Run()
 		inputManager.Update();
 		windowManager.ClearBackground();
 		stateManager.Update();
+		//renderManager.Update(); to do
 		stateManager.Draw();
 
 		windowManager.SwapBuffers();

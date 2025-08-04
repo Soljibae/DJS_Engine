@@ -9,3 +9,4 @@
 #include "TextureManager.h"
 #include "RenderManager.h"
 #include "Shader.h"
+#include "CameraManager.h"
