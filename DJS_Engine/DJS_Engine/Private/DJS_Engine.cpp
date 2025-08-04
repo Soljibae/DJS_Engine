@@ -28,10 +28,10 @@ void DJS_ENGINE::Init()
 		return;
 	}
 
-	if (!gladLoadGL(glfwGetProcAddress)) // gladLoadGL 함수 호출
+	if (!gladLoadGL(glfwGetProcAddress)) 
 	{
 		std::cerr << "Failed to initialize GLAD" << std::endl;
-		return; // GLAD 초기화 실패 시 프로그램 종료
+		return; 
 	}
 
 	inputManager.Init(windowManager.GetWindow());
