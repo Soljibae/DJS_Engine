@@ -9,7 +9,7 @@ public:
     };
 
     tvec2() : x(0), y(0) {}
-    tvec2(T value) : x(value), y(value) {}
+    explicit tvec2(T value) : x(value), y(value) {}
     tvec2(T x, T y) : x(x), y(y) {}
 
     size_t size() const {
@@ -28,12 +28,68 @@ public:
     {
         return tvec2(this->x + scalar, this->y + scalar);
     }
+
+    tvec2 operator-(const tvec2& other) const
+    {
+        return tvec2(this->x - other.x, this->y - other.y);
+    }
+
+    tvec2 operator-(const T& scalar) const
+    {
+        return tvec2(this->x - scalar, this->y - scalar);
+    }
+
+    tvec2 operator*(const tvec2& other) const
+    {
+        return tvec2(this->x * other.x, this->y * other.y);
+    }
+
+    tvec2 operator*(const T& scalar) const
+    {
+        return tvec2(this->x * scalar, this->y * scalar);
+    }
+
+    tvec2 operator/(const tvec2& other) const
+    {
+        return tvec2(this->x / other.x, this->y / other.y);
+    }
+
+    tvec2 operator/(const T& scalar) const
+    {
+        return tvec2(this->x / scalar, this->y / scalar);
+    }
+
+    tvec2 operator+() const {
+        return tvec2(x, y);
+    }
+
+    tvec2 operator-() const {
+        return tvec2(-x, -y);
+    }
 };
 
 template<typename T>
 tvec2<T> operator+(const T& scalar, const tvec2<T>& vec)
 {
     return vec + scalar;
+}
+
+template<typename T>
+tvec2<T> operator-(const T& scalar, const tvec2<T>& vec)
+{
+    return -(vec - scalar);
+}
+
+template<typename T>
+tvec2<T> operator*(const T& scalar, const tvec2<T>& vec)
+{
+    return vec * scalar;
+}
+
+template<typename T>
+tvec2<T> operator/(const T& scalar, const tvec2<T>& vec)
+{
+    return tvec2(scalar / vec.x, scalar / vec.y);
 }
 
 using vec2 = tvec2<float>;
