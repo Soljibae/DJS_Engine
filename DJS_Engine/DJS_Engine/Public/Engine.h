@@ -10,4 +10,4 @@
 #include "RenderManager.h"
 #include "Shader.h"
 #include "CameraManager.h"
-#include "Math.h"
+#include "DJS_Math.h"
