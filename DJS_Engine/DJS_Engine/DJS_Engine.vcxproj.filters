@@ -54,6 +54,15 @@
     <ClInclude Include="Public\DJS_Math.h">
       <Filter>Public</Filter>
     </ClInclude>
+    <ClInclude Include="Public\DJS_Vector2.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\DJS_Vector3.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\DJS_Vector4.h">
+      <Filter>Public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="private\DJS_Engine.cpp">
@@ -81,9 +90,6 @@
       <Filter>Private</Filter>
     </ClCompile>
     <ClCompile Include="Private\CameraManager.cpp">
-      <Filter>Private</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DJS_Math.cpp">
       <Filter>Private</Filter>
     </ClCompile>
   </ItemGroup>

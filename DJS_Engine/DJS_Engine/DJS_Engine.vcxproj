@@ -22,6 +22,9 @@
     <ClInclude Include="Public\CameraManager.h" />
     <ClInclude Include="public\DJS_Engine.h" />
     <ClInclude Include="Public\DJS_Math.h" />
+    <ClInclude Include="Public\DJS_Vector2.h" />
+    <ClInclude Include="Public\DJS_Vector3.h" />
+    <ClInclude Include="Public\DJS_Vector4.h" />
     <ClInclude Include="public\Engine.h" />
     <ClInclude Include="Public\GameObject.h" />
     <ClInclude Include="Public\GameState.h" />
@@ -36,7 +39,6 @@
   <ItemGroup>
     <ClCompile Include="Private\CameraManager.cpp" />
     <ClCompile Include="private\DJS_Engine.cpp" />
-    <ClCompile Include="Private\DJS_Math.cpp" />
     <ClCompile Include="Private\InputManager.cpp" />
     <ClCompile Include="Private\ObjectManager.cpp" />
     <ClCompile Include="Private\RenderManager.cpp" />
